@@ -12,4 +12,6 @@ class AppStrings {
       'This is a template project with mvvm clean architecture';
   static const String onBoardingSubTitle4 =
       'This is a template project with mvvm clean architecture';
+  static const String skip =
+      'Skip';
 }

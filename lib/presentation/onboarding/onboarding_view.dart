@@ -14,7 +14,7 @@ class OnBoardingView extends StatefulWidget {
 }
 
 class _OnBoardingViewState extends State<OnBoardingView> {
-  late List<SliderObject> _list = _getSlider();
+  late final List<SliderObject> _list = _getSlider();
   final PageController _pageController = PageController();
   int _currentIndex = 0;
 
@@ -50,6 +50,24 @@ class _OnBoardingViewState extends State<OnBoardingView> {
         itemBuilder: (context, index) {
           return OnBoardingPage(_list[index]);
         },
+      ),
+      bottomSheet: Container(
+        height: AppSize.s100,
+        color: ColorManager.white,
+        child: Column(
+          children: [
+            Align(
+              alignment: Alignment.centerRight,
+              child: TextButton(
+                child: const Text(
+                  AppStrings.skip,
+                  textAlign: TextAlign.end,
+                ),
+                onPressed: () {},
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
